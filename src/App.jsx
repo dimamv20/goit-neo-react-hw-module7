@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from './redux/contactsOps';
 import ContactList from './components/ContactList';
 import ContactForm from './components/ContactForm';
+import Filter from './components/Filter';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const App = () => {
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
       <ContactForm />
+      <Filter />
       <ContactList />
     </div>
   );
